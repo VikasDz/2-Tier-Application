@@ -1,0 +1,38 @@
+git clone <https://github.com/your-repo>
+
+cd repository
+
+apt update
+
+vim DockerFile (Write Your Docker File)
+
+FROM node:14
+
+WORKDIR  /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm","start"]
+
+
+apt-get install docker.io
+
+docker ps
+
+sudo chown  $USER /var/run/docker.sock (For Give Permission)
+
+docker build -t image_name .
+
+docker images <Show All Images> 
+
+docker run -d -p 3000:3000 2-tier-application:latest
+
+docker ps
+
+Note : Edit your InBounded Rules from Security Groups..
+
+
